@@ -19,6 +19,8 @@ public class MemcachedNBClient {
 
     public static String getMemcachedValue(List<String> ipList, String key) {
 
+        MemcachedClient mcc = null;
+        
         try {
 
             List<InetSocketAddress> inetSocketAddressList = new ArrayList<>();
@@ -28,11 +30,16 @@ public class MemcachedNBClient {
                 inetSocketAddressList.add(inetSocketAddress);
             }
 
-            MemcachedClient mcc = new MemcachedClient(inetSocketAddressList);
-            return (String) mcc.get(key);
+            mcc = new MemcachedClient(inetSocketAddressList);
+            String result = (String) mcc.get(key);
+            return result;
         } catch (IOException e) {
             e.printStackTrace();
             return "Error while retrieving value.";
+        } finally {
+            if (mcc != null) {
+                mcc.shutdown();
+            }
         }
     }
 
