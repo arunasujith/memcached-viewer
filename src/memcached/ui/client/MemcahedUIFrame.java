@@ -59,7 +59,7 @@ public class MemcahedUIFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Add Memcahed Server");
+        jLabel1.setText("Add Memcached Server");
 
         addServerBtn.setText("Add Server");
         addServerBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class MemcahedUIFrame extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel2.setText("Search Memcahed Server");
+        jLabel2.setText("Search Memcached Server");
 
         jMenu1.setText("File");
 
