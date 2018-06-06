@@ -16,6 +16,7 @@ public class Main {
      */
     public static void main(String[] args) {
         MemcahedUIFrame ui = new MemcahedUIFrame();
+        ui.setTitle("Memcached Viewer");
         ui.setLocationRelativeTo(null);
         ui.setResizable(false);
         ui.setVisible(true);
